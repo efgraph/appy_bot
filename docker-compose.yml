@@ -8,6 +8,16 @@ services:
             - ./docker/app-variables.env
         depends_on:
             - postgres
+
+    tests:
+        build:
+            context: ./
+            dockerfile: ./tests.Dockerfile
+        env_file:
+            - ./docker/app-variables.env
+        depends_on:
+            - postgres
+
     postgres:
         image: postgres:14.4
         restart: always

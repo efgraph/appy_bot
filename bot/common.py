@@ -8,4 +8,3 @@ class PromptsCallbackFactory(CallbackData, prefix='prompt'):
 class ScoresCallbackFactory(CallbackData, prefix='score'):
     score: int
     id: int
-

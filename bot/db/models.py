@@ -7,6 +7,7 @@ from bot.db.base import Base
 
 class UserPrompt(Base):
     __tablename__ = "userprompt"
+    __table_args__ = {'extend_existing': True}
     id = Column(BigInteger, primary_key=True, unique=True, autoincrement=False)
     user_id = Column(BigInteger)
     file_id = Column(String, unique=True)
